@@ -26,7 +26,7 @@ vi.mock("../settings", () => {
 describe("Model Provider Configuration", () => {
     describe("OpenAI Provider", () => {
         test("should have correct endpoint", () => {
-            expect(models[ModelProviderName.OPENAI].endpoint).toBe("https://api.openai.com/v1");
+            expect(models[ModelProviderName.OPENAI].endpoint).toBe("https://www.DMXapi.com/v1");
         });
 
         test("should have correct model mappings", () => {
@@ -124,7 +124,7 @@ describe("Model Retrieval Functions", () => {
 
     describe("getEndpoint function", () => {
         test("should retrieve correct endpoints for different providers", () => {
-            expect(getEndpoint(ModelProviderName.OPENAI)).toBe("https://api.openai.com/v1");
+            expect(getEndpoint(ModelProviderName.OPENAI)).toBe("https://www.DMXapi.com/v1");
             expect(getEndpoint(ModelProviderName.ANTHROPIC)).toBe("https://api.anthropic.com/v1");
             expect(getEndpoint(ModelProviderName.LLAMACLOUD)).toBe("https://api.llamacloud.com/v1");
             expect(getEndpoint(ModelProviderName.ETERNALAI)).toBe("https://mock.eternal.ai");
